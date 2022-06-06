@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shower Presentation Engine</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <link
+            rel="stylesheet"
+            href="node_modules/@shower/ribbon/styles/styles.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css"
+        />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+        <style>
+            .shower {
+                --slide-ratio: calc(16 / 9);
+            }
+
+            iframe {
+                height: 70%;
+            }
+
+            h3 {
+                line-height: 1.2;
+                font-size: 20px;
+                color: var(--color-grey);
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .slide {
+                padding-bottom: 40px;
+            }
+
+            .slide code {
+                font-family: inherit;
+            }
+
+            .shout.shout-custom {
+                transform: translate(-50%, -50%);
+                max-width: 600px;
+                left: 50%;
+            }
+
+            .link-wrapper {
+                margin-top: -33px !important;
+            }
+
+            .link {
+                font-size: 16px;
+            }
+
+            pre code.hljs {
+                padding: 0;
+                margin: 0;
+            }
+
+            .info {
+                padding: 0.1em 0.3em;
+                border-radius: 0.2em;
+            }
+
+            .info-dark {
+                background: #000;
+                color: #fff;
+            }
+
+            .td-title {
+                white-space: nowrap;
+            }
+
+            .slide .td-description {
+                padding: 20px;
+                line-height: 1.3;
+            }
+        </style>
+    </head>
+    <body class="shower list">
+        <header class="caption">
+            <h1>Frontend полезности</h1>
+        </header>
+
+        <section class="slide">
+            <h2 style="font-size: 80px" class="shout">Frontend полезности</h2>
+        </section>
+
+        <section class="slide">
+            <h2>Мультикурсор</h2>
+            <h3>Примеры для vs code</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="td-title">
+                            <span class="info info-dark">Alt+Click</span>
+                        </td>
+                        <td class="td-description">Вставить курсор</td>
+                    </tr>
+                    <tr>
+                        <td class="td-title">
+                            <span class="info info-dark">Ctrl+Alt+ ↑ / ↓</span>
+                        </td>
+                        <td class="td-description">
+                            Вставить курсор сверху / снизу
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-title">
+                            <span class="info info-dark">Ctrl+U</span>
+                        </td>
+                        <td class="td-description">
+                            Отменить последнюю операцию курсора. Также можно
+                            кликнуть на курсор с зажатым alt для отмены
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slide">
+            <h2>Убрать все лишнее</h2>
+            <h3>Примеры для vs code</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="td-title">
+                            <span class="info info-dark">Ctrl+K Z</span>
+                        </td>
+                        <td class="td-description">
+                            Включить/отключить zen mode. Режим, при котором
+                            убираются все панели и остается только вкладка с
+                            кодом
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-title">
+                            <span class="info info-dark">Ctrl+B</span>
+                        </td>
+                        <td class="td-description">
+                            Скрыть/Показать боковую панель
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-title">
+                            <span class="info info-dark">Ctrl+`</span>
+                        </td>
+                        <td class="td-description">Скрыть/Показать терминал</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text"></p>
+            <p class="text"></p>
+        </section>
+
+        <section class="slide">
+            <h2>Проверить на переполнение контента</h2>
+            <p>
+                В dev tools пишем
+                <span class="info info-dark">document.designMode = 'on'</span> и
+                редактируем контент
+            </p>
+        </section>
+
+        <section class="slide">
+            <h2>Псевдоэлементы у инпута</h2>
+            <p class="link-wrapper">
+                <a
+                class="link"
+                target="_blank"
+                href="https://codesandbox.io/s/hungry-moon-kzk0t9"
+                >https://codesandbox.io/s/hungry-moon-kzk0t9</a
+                >
+            </p>
+            <p>Для инпутов с типом checkbox и radio работают псевдоэлементы</p>
+        </section>
+
+        <section class="slide">
+            <h2>map, reduce, filter и другие</h2>
+            <p class="link-wrapper">
+                <a
+                class="link"
+                target="_blank"
+                href="https://codesandbox.io/s/long-cache-ioovll"
+                >https://codesandbox.io/s/long-cache-ioovll</a
+                >
+            </p>
+            <p>Если в любой из итерации методов будет ошибка, то без обработки ошибки внутри функции колбека, ошибка будет выброшена наверх.</p>
+        </section>
+
+        <section class="slide">
+            <h2>Ошибаться это нормально</h2>
+            <p class="link-wrapper">
+                <a
+                class="link"
+                target="_blank"
+                href="https://www.youtube.com/watch?v=4srVRott8uU"
+                >https://www.youtube.com/watch?v=4srVRott8uU</a
+                >
+            </p>
+            <p>Доклад Вадима Макишвили <br>«Ошибка. Осознание, примирение, извлечение пользы»</p>
+            <blockquote>В попытке не допускать ошибок, перестал что-то делать, и это стало самой большой его ошибкой.<figcaption>Валерий Афонченко</figcaption></blockquote>
+        </section>
+
+        <div class="progress"></div>
+
+        <script src="shower/shower.js"></script>
+        <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>
